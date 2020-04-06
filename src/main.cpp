@@ -6,10 +6,8 @@
 using namespace std;
 
 int main() {
-  //Process p(1);
-  //cout << p.UpTime()<<"\n";
-  //LinuxParser::User(1);
-  //cout << LinuxParser::UpTime();
   System system;
-  NCursesDisplay::Display(system);
+  vector<Process> p = system.Processes();
+  int n = p.size();
+  NCursesDisplay::Display(system,n);
 }
